@@ -4,11 +4,9 @@ An interactive mobile educational application built with **Flutter** that visual
 
 ## Team
 
-| Name | Role |
-|------|------|
-| **Nurullah Usta** | State & Logic Developer |
-| **Arian Charkhchi** | UI/UX Developer |
-| **Emre Ercan Güler** | Animations Developer |
+- **Nurullah Usta**
+- **Arian Charkhchi**
+- **Emre Ercan Güler**
 
 ## About
 
@@ -44,22 +42,12 @@ lib/
     └── packet_animation.dart          # Animated widgets & custom painters
 ```
 
-| File | Owner | Description |
-|------|-------|-------------|
-| `crypto_state.dart` | Nurullah Usta | Business logic, encryption simulation, phase management |
-| `crypto_ui.dart` | Arian Charkhchi | Screen layout, input controls, terminal log, educational panels |
-| `packet_animation.dart` | Emre Ercan Güler | Packet movement, wire painter, scanline overlay, glow effects |
+| File | Description |
+|------|-------------|
+| `crypto_state.dart` | Business logic, encryption simulation, phase management |
+| `crypto_ui.dart` | Screen layout, input controls, terminal log, educational panels |
+| `packet_animation.dart` | Packet movement, wire painter, scanline overlay, glow effects |
 
-## Design Language
-
-**Digital Brutalism x SOC Terminal**
-
-- **Background**: Deep black/charcoal (`#0A0A0A`)
-- **Primary Accent**: Neon Green (`#00FF41`)
-- **Warning Accent**: Bright Orange (`#FF6600`)
-- **Danger Accent**: Red (`#FF3333`)
-- **Typography**: Roboto Mono (monospace terminal feel)
-- **Components**: Sharp edges, zero border-radius, visible borders, raw data presentation
 
 ## Getting Started
 
