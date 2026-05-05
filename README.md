@@ -1,8 +1,8 @@
-# 🔐 Cryptography & Network Security Simulator
+# Cryptography & Network Security Simulator
 
 An interactive mobile educational application built with **Flutter** that visually teaches how data travels over a network and demonstrates the importance of encryption through the **CIA Triad** (Confidentiality, Integrity, Authentication).
 
-## 👥 Team
+## Team
 
 | Name | Role |
 |------|------|
@@ -10,7 +10,7 @@ An interactive mobile educational application built with **Flutter** that visual
 | **Arian Charkhchi** | UI/UX Developer |
 | **Emre Ercan Güler** | Animations Developer |
 
-## 📖 About
+## About
 
 This simulator provides a hands-on learning experience for understanding core cryptographic concepts used in network security. Users can send messages between two parties (Alice and Bob) through a hostile network where a Man-in-the-Middle (MITM) attacker attempts to intercept the communication.
 
@@ -24,14 +24,14 @@ This simulator provides a hands-on learning experience for understanding core cr
 
 ### Key Features
 
-- 🎯 **Three Visual Nodes** — Alice (Sender), Network/Hacker (MITM), and Bob (Receiver)
-- 🔄 **Animated Packet Traversal** — Watch data packets move across the network in real-time
-- 🔒 **Live Encryption Demo** — See plaintext transform into ciphertext with lock/unlock indicators
-- ⚠️ **Hacker Interception** — Visual feedback showing what the attacker can and cannot read
-- 📚 **Educational Notes** — Context-aware explanations grounded in real-world SOC/packet analysis concepts
-- 🖥️ **SOC Terminal Aesthetic** — Dark mode UI with neon accents, scanline effects, and monospace typography
+- **Three Visual Nodes** — Alice (Sender), Network/Hacker (MITM), and Bob (Receiver)
+- **Animated Packet Traversal** — Watch data packets move across the network in real-time
+- **Live Encryption Demo** — See plaintext transform into ciphertext with lock/unlock indicators
+- **Hacker Interception** — Visual feedback showing what the attacker can and cannot read
+- **Educational Notes** — Context-aware explanations grounded in real-world SOC/packet analysis concepts
+- **SOC Terminal Aesthetic** — Dark mode UI with neon accents, scanline effects, and monospace typography
 
-## 🏗️ Architecture
+## Architecture
 
 The project follows a **modular 3-file architecture** designed for parallel team development with minimal merge conflicts:
 
@@ -50,9 +50,9 @@ lib/
 | `crypto_ui.dart` | Arian Charkhchi | Screen layout, input controls, terminal log, educational panels |
 | `packet_animation.dart` | Emre Ercan Güler | Packet movement, wire painter, scanline overlay, glow effects |
 
-## 🎨 Design Language
+## Design Language
 
-**Digital Brutalism × SOC Terminal**
+**Digital Brutalism x SOC Terminal**
 
 - **Background**: Deep black/charcoal (`#0A0A0A`)
 - **Primary Accent**: Neon Green (`#00FF41`)
@@ -61,7 +61,7 @@ lib/
 - **Typography**: Roboto Mono (monospace terminal feel)
 - **Components**: Sharp edges, zero border-radius, visible borders, raw data presentation
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -85,7 +85,7 @@ flutter pub get
 flutter run
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |-----------|---------|
@@ -94,6 +94,6 @@ flutter run
 | Google Fonts | Roboto Mono typography |
 | CustomPainter | Wire and node animations |
 
-## 📝 License
+## License
 
 This project is developed for educational purposes as part of a Computer Networks course.
