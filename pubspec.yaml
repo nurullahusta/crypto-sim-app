@@ -1,5 +1,5 @@
 name: crypto_sim_app
-description: Cryptography & Network Security Simulator - Interactive Educational App
+description: CryptoLearn — Interactive Cryptography Education App for Middle School
 publish_to: 'none'
 version: 1.0.0+1
 
