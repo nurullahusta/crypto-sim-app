@@ -1,87 +1,50 @@
-# Cryptography & Network Security Simulator
+# Operation CryptoBreak
 
-An interactive mobile educational application built with **Flutter** that visually teaches how data travels over a network and demonstrates the importance of encryption through the **CIA Triad** (Confidentiality, Integrity, Authentication).
+Operation CryptoBreak is an interactive, spy-themed educational mobile application designed to teach cryptography concepts to middle school students. Through a series of five tactical agent missions, students decrypt enemy communications, crack codes using various historic ciphers, and learn fundamental principles of data security.
 
-## Team
+## Missions
 
-- **Nurullah Usta**
-- **Arian Charkhchi**
-- **Emre Ercan Güler**
-
-## About
-
-This simulator provides a hands-on learning experience for understanding core cryptographic concepts used in network security. Users can send messages between two parties (Alice and Bob) through a hostile network where a Man-in-the-Middle (MITM) attacker attempts to intercept the communication.
-
-### Simulation Modes
-
-| Mode | Protocol | What Happens |
-|------|----------|-------------|
-| **Plaintext** | HTTP | Message is sent as raw text — the hacker intercepts and reads everything |
-| **Symmetric Key** | AES | Both parties share a secret key — the hacker sees only scrambled ciphertext |
-| **Asymmetric Key** | RSA / HTTPS | Alice encrypts with Bob's public key — only Bob's private key can decrypt |
-
-### Key Features
-
-- **Three Visual Nodes** — Alice (Sender), Network/Hacker (MITM), and Bob (Receiver)
-- **Animated Packet Traversal** — Watch data packets move across the network in real-time
-- **Live Encryption Demo** — See plaintext transform into ciphertext with lock/unlock indicators
-- **Hacker Interception** — Visual feedback showing what the attacker can and cannot read
-- **Educational Notes** — Context-aware explanations grounded in real-world SOC/packet analysis concepts
-- **SOC Terminal Aesthetic** — Dark mode UI with neon accents, scanline effects, and monospace typography
-
-## Architecture
-
-The project follows a **modular 3-file architecture** designed for parallel team development with minimal merge conflicts:
-
-```
-lib/
-├── main.dart                          # App entry point, theme & Provider setup
-└── crypto_simulator/
-    ├── crypto_state.dart              # State management (ChangeNotifier)
-    ├── crypto_ui.dart                 # UI layout & brutalist styling
-    └── packet_animation.dart          # Animated widgets & custom painters
-```
-
-| File | Description |
-|------|-------------|
-| `crypto_state.dart` | Business logic, encryption simulation, phase management |
-| `crypto_ui.dart` | Screen layout, input controls, terminal log, educational panels |
-| `packet_animation.dart` | Packet movement, wire painter, scanline overlay, glow effects |
-
+| Mission | Cipher | XP Reward | Difficulty |
+| :--- | :--- | :--- | :--- |
+| **Mission 0** — Caesar Cipher | Shift Cipher | 100 XP | ⭐ (Easy) |
+| **Mission 1** — Brute Force | Caesar Key cracking | 150 XP | ⭐⭐ (Easy) |
+| **Mission 2** — Vigenère | Polyalphabetic Substitution | 200 XP | ⭐⭐⭐ (Medium) |
+| **Mission 3** — Asymmetric | Public/Private Key pair | 250 XP | ⭐⭐⭐⭐ (Hard) |
+| **Mission 4** — Hashing | SHA-256 Fingerprinting | 300 XP | ⭐⭐⭐⭐⭐ (Expert) |
 
 ## Getting Started
 
 ### Prerequisites
+- Flutter SDK `>= 3.0.0`
+- Dart SDK `>= 3.0.0 < 4.0.0`
 
-- [Flutter SDK](https://flutter.dev/docs/get-started/install) (3.0+)
-- Android Studio / VS Code with Flutter extension
-- An Android emulator or physical device
+### Installation & Execution
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nurullahusta/crypto-sim-app.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd crypto-sim-app
+   ```
+3. Fetch application dependencies:
+   ```bash
+   flutter pub get
+   ```
+4. Run the application on a connected device or emulator:
+   ```bash
+   flutter run
+   ```
 
-### Installation
+## Architecture
 
-```bash
-# Clone the repository
-git clone https://github.com/nurullahusta/crypto-sim-app.git
+The project follows a clean, decoupled 4-layer structural design:
 
-# Navigate to the project
-cd crypto-sim-app
-
-# Install dependencies
-flutter pub get
-
-# Run the app
-flutter run
-```
-
-## Tech Stack
-
-| Technology | Purpose |
-|-----------|---------|
-| Flutter | Cross-platform UI framework |
-| Provider | State management |
-| Google Fonts | Roboto Mono typography |
-| CustomPainter | Wire and node animations |
+- **`lib/game/`** — Core domain logic, state management (`GameState` ChangeNotifier), models, and cipher algorithms. This layer has zero dependencies on Flutter UI components (only imports `package:flutter/foundation.dart`).
+- **`lib/app/`** — Central configuration layer housing the unified cryptographic Design System (`theme.dart`) and standard navigator routing configurations (`router.dart`).
+- **`lib/screens/`** — Main screen pages of the application (`onboarding_screen.dart`, `mission_map_screen.dart`, and `mission_screen.dart` which implements the Briefing → Puzzle → Reveal state machine).
+- **`lib/widgets/`** — Reusable, context-specific puzzle widgets and shared UI layout containers tailored to each cryptographic technique.
 
 ## License
 
-This project is developed for educational purposes as part of a Computer Networks course.
+This project is licensed under the [MIT License](LICENSE).
